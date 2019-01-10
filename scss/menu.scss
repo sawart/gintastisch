@@ -55,11 +55,52 @@ nav {
 		  	padding: 0 0 0 3em;
 			
 			a {
-				@include headline;
+				position: relative;
+				display: inline-block;
+				margin: 0 25px;
+				outline: none;
+				@include headline(700);
 				font-size: 1.2em;
 				color: $white;
 			}
+			
+			&:hover,
+			&:focus {
+				outline: none;
+			}
 		}
 	}
+}
+
+/* Effect 5: same word slide in */
+.cl-effect-5 li a {
+	overflow: hidden;
+	padding: 4px 4px;
+	height: 1em;
+}
+
+.cl-effect-5 li a span {
+	position: relative;
+	display: inline-block;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.cl-effect-5 li a span::before {
+	position: absolute;
+	top: 100%;
+	content: attr(data-hover);
+	font-weight: 200;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.cl-effect-5 li a:hover span,
+.cl-effect-5 li a:focus span {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
 }
 

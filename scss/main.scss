@@ -11,7 +11,7 @@ body, html {
 }
 
 h1, h2, h3, h4 {
-	@include headline; 
+	@include headline(700); 
 }
 
 h1 {
@@ -61,15 +61,56 @@ img {
 	margin-top: 2.5em;
 	
 	.btn {
-		@include headline;
+		@include headline(700);
 		font-size: 1em;
-		background: $secColor;
-		color: $white;
-		padding: 1em 2em;
+		padding: .7em 2em;
 		
 		&:first-child {
 			margin-right: 2em;
 		}
+	}
+	
+	.btnEffect {
+		color: $white;
+		transition: all 0.5s;
+		position: relative;
+	}
+	
+	.btnEffect::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: $secColor;
+		border: 1px solid $secColor;
+		transition: all 0.3s;
+	}
+	
+	.btnEffect:hover::before {
+		opacity: 0 ;
+		transform: scale(0.5,0.5);
+	}
+	
+	.btnEffect::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+		transition: all 0.3s;
+		border: 1px solid rgba(255,255,255,.5);
+		transform: scale(1.2,1.2);
+	}
+	
+	.btnEffect:hover::after {
+		opacity: 1;
+		transform: scale(1,1);
 	}
 }
 
@@ -214,6 +255,10 @@ img {
 	}
 }
 
+.limomacher {
+	background: $gray;
+}
+
 .boxWrapper, .limomacher {
 	@include flex;
 	flex-flow: row wrap;
@@ -247,6 +292,12 @@ img {
 				}
 			}
 		}
+	}
+	
+	.rightBox {
+		background: url("../img/gin-tonic-table.png") no-repeat;
+		background-size: cover;
+	}
 		
 		.leftLimoBox {
 			@include flex;
@@ -254,9 +305,19 @@ img {
 			align-items: center;
 			
 			.innerBox {
+				@include flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				
+				img:first-child {
+					max-width: 200px;
+					height: auto;
+					margin-bottom: 3em;
+				}
 				
 				img {
-					max-width: 250px;
+					max-width: 75%;
 					height: auto;
 				}
 			}
@@ -270,19 +331,14 @@ img {
 			padding: 2em;
 			
 			.link {
+				margin-top: 2em;
+				
 				&:before {
 					background: $mainColor;
 				}
 			}
 		}
 		
-		
-	}
-
-	.rightBox {
-		background: url("../img/gin-tonic-table.png") no-repeat;
-		background-size: cover;
-	}
 }
 
 

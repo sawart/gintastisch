@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:700|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,700|Work+Sans');
 
 $mainColor: #565656; /* gray */
 $secColor: #8A101B; /* red */
 $white: #FFF; 
+$gray: #F2F2F2;
 
-@mixin headline {
+@mixin headline($weight) {
 	font-family: 'Poppins', sans-serif;
-	font-weight: bold;
+	font-weight: $weight;
 	text-transform: uppercase;
 }
 
