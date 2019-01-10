@@ -1,0 +1,22 @@
+/* Scss Document */
+
+@import 'variables';
+@import 'menu';
+
+body, html {
+	@include ft; 
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	@include headline; 
+	color: $secColor;
+	font-size: 3em;
+}
+
+a {
+	color: $mainColor;
+	text-decoration: none;
+}

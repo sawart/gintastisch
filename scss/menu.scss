@@ -1,0 +1,55 @@
+.metaNav {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	padding: .5em 2em 0 0;
+	
+	#phone {
+		margin-right: 2em;
+	}
+	
+	span {
+		display: inline-flex;
+		background-size: contain;
+		width: 25px;
+		height: 15px;
+		margin-right: .5em;
+	}
+	
+	#phone span {
+		background: url("../img/icons/phone.svg") no-repeat;
+		background-position: right;
+	}
+	
+	#mail span {
+		background: url("../img/icons/mail.svg") no-repeat;
+	}
+}
+
+nav {
+	box-sizing: border-box;
+	padding-right: 2em;
+	
+	ul {
+	  	display: -webkit-box;
+	 	display: -moz-box;
+	  	display: -ms-flexbox;
+	  	display: -webkit-flex;
+	  	display: flex;
+	  	-webkit-flex-flow: row wrap;
+	  	justify-content: flex-end;
+		list-style: none;
+		
+		li {
+		  	display: block;
+		  	padding: 1em 0 1em 3em;
+			
+			a {
+				@include headline;
+				font-size: 1.2em;
+			}
+		}
+	}
+}
+
