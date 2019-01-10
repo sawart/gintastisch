@@ -1,6 +1,10 @@
+header {
+	z-index: 1;
+}
+
 .metaNav {
 	box-sizing: border-box;
-	display: flex;
+	@include flex;
 	justify-content: flex-end;
 	width: 100%;
 	padding: .5em 2em 0 0;
@@ -32,11 +36,7 @@ nav {
 	padding-right: 2em;
 	
 	ul {
-	  	display: -webkit-box;
-	 	display: -moz-box;
-	  	display: -ms-flexbox;
-	  	display: -webkit-flex;
-	  	display: flex;
+	  	@include flex;
 	  	-webkit-flex-flow: row wrap;
 	  	justify-content: flex-end;
 		list-style: none;
@@ -48,6 +48,7 @@ nav {
 			a {
 				@include headline;
 				font-size: 1.2em;
+				color: $white;
 			}
 		}
 	}

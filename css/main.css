@@ -2,19 +2,198 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:700|Work+Sans");
 /* gray */
 /* red */
-.metaNav { box-sizing: border-box; display: flex; justify-content: flex-end; width: 100%; padding: .5em 2em 0 0; }
-.metaNav #phone { margin-right: 2em; }
-.metaNav span { display: inline-flex; background-size: contain; width: 25px; height: 15px; margin-right: .5em; }
-.metaNav #phone span { background: url("../img/icons/phone.svg") no-repeat; background-position: right; }
-.metaNav #mail span { background: url("../img/icons/mail.svg") no-repeat; }
+header {
+  z-index: 1; }
 
-nav { box-sizing: border-box; padding-right: 2em; }
-nav ul { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-flow: row wrap; justify-content: flex-end; list-style: none; }
-nav ul li { display: block; padding: 1em 0 1em 3em; }
-nav ul li a { font-family: 'Poppins', sans-serif; font-weight: bold; text-transform: uppercase; font-size: 1.5em; }
+.metaNav {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: .5em 2em 0 0; }
+  .metaNav #phone {
+    margin-right: 2em; }
+  .metaNav span {
+    display: inline-flex;
+    background-size: contain;
+    width: 25px;
+    height: 15px;
+    margin-right: .5em; }
+  .metaNav #phone span {
+    background: url("../img/icons/phone.svg") no-repeat;
+    background-position: right; }
+  .metaNav #mail span {
+    background: url("../img/icons/mail.svg") no-repeat; }
 
-body, html { font-family: 'Work Sans', sans-serif; font-size: 1em; box-sizing: border-box; margin: 0; padding: 0; }
+nav {
+  box-sizing: border-box;
+  padding-right: 2em; }
+  nav ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: flex-end;
+    list-style: none; }
+    nav ul li {
+      display: block;
+      padding: 1em 0 1em 3em; }
+      nav ul li a {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        color: #FFF; }
 
-h1 { font-family: 'Poppins', sans-serif; font-weight: bold; text-transform: uppercase; color: #8A101B; font-size: 3em; }
+body, html {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1em;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
-a { color: #565656; text-decoration: none; }
+h1, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #8A101B; }
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1em; }
+
+h3 {
+  font-size: 1.5em;
+  margin: 1.5em 0 0 0; }
+
+h4 {
+  transform: rotate(-90deg); }
+
+a {
+  color: #565656;
+  text-decoration: none; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+#buttons {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding-left: 2em;
+  margin-top: 2.5em; }
+  #buttons .btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    background: #8A101B;
+    color: #FFF;
+    padding: 1em 2em; }
+    #buttons .btn:first-child {
+      margin-right: 2em; }
+
+.logo {
+  position: absolute;
+  top: 1em;
+  width: 150px;
+  height: 150px;
+  margin-left: 2em; }
+
+.introWrapper {
+  position: relative;
+  top: -5em;
+  background: #565656;
+  width: 100%;
+  height: 80vh;
+  z-index: -1; }
+  .introWrapper .intro {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 60%;
+    margin: 0 auto; }
+    .introWrapper .intro .bottle {
+      padding: 5em 0 0 0;
+      min-width: 280px; }
+    .introWrapper .intro .introText {
+      padding: 6em 0 0 2em; }
+      .introWrapper .intro .introText .advantages {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-flow: row wrap; }
+        .introWrapper .intro .introText .advantages .item {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          align-items: center;
+          width: 50%; }
+          .introWrapper .intro .introText .advantages .item span {
+            display: block;
+            background: url("../img/icons/checked.svg") no-repeat;
+            background-size: contain;
+            width: 50px;
+            height: 30px;
+            margin: .5em; }
+          .introWrapper .intro .introText .advantages .item p {
+            width: 300px; }
+      .introWrapper .intro .introText h1, .introWrapper .intro .introText p {
+        color: #FFF; }
+
+.wrapper {
+  margin-bottom: 4em; }
+  .wrapper .intro {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 80%;
+    margin: 0 auto; }
+    .wrapper .intro .madeInAustria {
+      content: "";
+      width: 2px;
+      height: 250px;
+      background-color: #565656;
+      padding: 5em 0 0 0;
+      margin-left: 17em; }
+    .wrapper .intro .innerWrapper {
+      padding: 2em 0 0 2em; }
+      .wrapper .intro .innerWrapper .ingredients {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end; }
+        .wrapper .intro .innerWrapper .ingredients .item {
+          width: 50%; }
+          .wrapper .intro .innerWrapper .ingredients .item span {
+            display: block;
+            background: url("../img/icons/checked.svg") no-repeat;
+            background-size: contain;
+            width: 50px;
+            height: 30px;
+            margin: .5em; }
+          .wrapper .intro .innerWrapper .ingredients .item p {
+            width: 300px;
+            margin: 0; }
+      .wrapper .intro .innerWrapper h1, .wrapper .intro .innerWrapper p {
+        color: #565656; }
