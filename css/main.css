@@ -3,6 +3,9 @@
 /* gray */
 /* red */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 1; }
 
 .metaNav {
@@ -14,7 +17,9 @@ header {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  padding: .5em 2em 0 0; }
+  height: 3em;
+  padding: 1em 2em 0 0;
+  background-color: #FFF; }
   .metaNav #phone {
     margin-right: 2em; }
   .metaNav span {
@@ -30,8 +35,12 @@ header {
     background: url("../img/icons/mail.svg") no-repeat; }
 
 nav {
+  position: fixed;
   box-sizing: border-box;
-  padding-right: 2em; }
+  width: 100%;
+  height: 4em;
+  padding-right: 2em;
+  background-color: #565656; }
   nav ul {
     display: -webkit-box;
     display: -moz-box;
@@ -43,7 +52,7 @@ nav {
     list-style: none; }
     nav ul li {
       display: block;
-      padding: 1em 0 1em 3em; }
+      padding: 0 0 0 3em; }
       nav ul li a {
         font-family: 'Poppins', sans-serif;
         font-weight: bold;
@@ -58,22 +67,37 @@ body, html {
   margin: 0;
   padding: 0; }
 
-h1, h3, h4 {
+h1, h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  text-transform: uppercase;
-  color: #8A101B; }
+  text-transform: uppercase; }
 
 h1 {
   font-size: 2.5em;
   line-height: 1em; }
 
+h2 {
+  font-size: 2.5em;
+  line-height: 1em;
+  color: #FFF; }
+
 h3 {
   font-size: 1.5em;
-  margin: 1.5em 0 0 0; }
+  margin: 1.5em 0 0 0;
+  color: #8A101B; }
 
 h4 {
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  color: #565656;
+  margin-left: -6.5em;
+  position: relative;
+  top: 16em;
+  width: 234px;
+  height: 2em;
+  font-size: 1.3em; }
 
 a {
   color: #565656;
@@ -102,20 +126,32 @@ img {
     #buttons .btn:first-child {
       margin-right: 2em; }
 
+.link {
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase; }
+  .link:before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    margin-right: 1em; }
+
 .logo {
   position: absolute;
-  top: 1em;
+  top: -2em;
   width: 150px;
   height: 150px;
   margin-left: 2em; }
 
 .introWrapper {
   position: relative;
-  top: -5em;
+  top: 3em;
   background: #565656;
   width: 100%;
   height: 80vh;
-  z-index: -1; }
+  margin-bottom: 10%;
+  z-index: 0; }
   .introWrapper .intro {
     display: -webkit-box;
     display: -moz-box;
@@ -169,7 +205,7 @@ img {
     .wrapper .intro .madeInAustria {
       content: "";
       width: 2px;
-      height: 250px;
+      height: 450px;
       background-color: #565656;
       padding: 5em 0 0 0;
       margin-left: 17em; }
@@ -182,7 +218,8 @@ img {
         display: -webkit-flex;
         display: flex;
         flex-flow: row wrap;
-        justify-content: flex-end; }
+        justify-content: flex-end;
+        padding-left: 4em; }
         .wrapper .intro .innerWrapper .ingredients .item {
           width: 50%; }
           .wrapper .intro .innerWrapper .ingredients .item span {
@@ -197,3 +234,72 @@ img {
             margin: 0; }
       .wrapper .intro .innerWrapper h1, .wrapper .intro .innerWrapper p {
         color: #565656; }
+
+.confiBtn {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 4em;
+  background: #565656; }
+  .confiBtn h1 {
+    color: #FFF; }
+
+.boxWrapper, .limomacher {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap; }
+  .boxWrapper .leftBox, .boxWrapper .rightBox, .boxWrapper .leftLimoBox, .boxWrapper .rightLimoBox, .limomacher .leftBox, .limomacher .rightBox, .limomacher .leftLimoBox, .limomacher .rightLimoBox {
+    width: 50%; }
+    .boxWrapper .leftBox:before, .boxWrapper .rightBox:before, .boxWrapper .leftLimoBox:before, .boxWrapper .rightLimoBox:before, .limomacher .leftBox:before, .limomacher .rightBox:before, .limomacher .leftLimoBox:before, .limomacher .rightLimoBox:before {
+      content: "";
+      float: left;
+      padding-top: 100%; }
+  .boxWrapper .leftBox, .limomacher .leftBox {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background: #8A101B; }
+    .boxWrapper .leftBox .innerBox a, .limomacher .leftBox .innerBox a {
+      color: #FFF !important; }
+    .boxWrapper .leftBox .innerBox .link:before, .limomacher .leftBox .innerBox .link:before {
+      background: #FFF; }
+    .boxWrapper .leftBox .leftLimoBox, .limomacher .leftBox .leftLimoBox {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .boxWrapper .leftBox .leftLimoBox .innerBox img, .limomacher .leftBox .leftLimoBox .innerBox img {
+        max-width: 250px;
+        height: auto; }
+    .boxWrapper .leftBox .rightLimoBox, .limomacher .leftBox .rightLimoBox {
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2em; }
+      .boxWrapper .leftBox .rightLimoBox .link:before, .limomacher .leftBox .rightLimoBox .link:before {
+        background: #565656; }
+  .boxWrapper .rightBox, .limomacher .rightBox {
+    background: url("../img/gin-tonic-table.png") no-repeat;
+    background-size: cover; }
