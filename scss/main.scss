@@ -10,7 +10,7 @@ body, html {
 	padding: 0;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
 	@include headline(700); 
 }
 
@@ -43,6 +43,16 @@ h4 {
 	width: 234px;
 	height: 2em;
 	font-size: 1.3em;
+}
+
+h5 {
+	font-size: 1em;
+	margin: 2em 0 0 0;
+}
+
+p, ul li a {
+	font-size: .9em;
+	letter-spacing: 2px;
 }
 
 a {
@@ -121,11 +131,33 @@ img {
 	
 	&:before {
 		content: "";
-		display: block;
 		width: 50px;
 		height: 2px;
 		margin-right: 1em;
 	}
+  
+	  &:after {
+		content: "";
+		width: 50px;
+		height: 2px;
+		margin-left: -12.5em;
+	  }
+
+	  &:hover:after {
+		animation: .5s linkAnimation;
+	  }
+  
+  @keyframes linkAnimation {
+    0% {
+      margin-left: -12.5em;
+    }
+    
+    100% {
+      margin-left: 0;
+      width: 0;
+    }
+  }
+  
 }
 
 
@@ -287,7 +319,7 @@ img {
 				}
 			
 			.link {
-				&:before {
+				&:before, &:after {
 					background: $white;
 				}
 			}
@@ -333,12 +365,115 @@ img {
 			.link {
 				margin-top: 2em;
 				
-				&:before {
+				&:before, &:after {
 					background: $mainColor;
 				}
 			}
 		}
+}
+
+.customer {
+	margin-bottom: 4em;
 		
+	h3 {
+		text-align: center;
+		margin: 2em 0 2em 0;
+	}
+	
+	.customerGrid {
+		@include flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		width: 60%;
+		margin: 0 auto;
+
+		.item {
+			box-sizing: border-box;
+			max-width: 20%;
+			padding: 2em;
+			border-right: 1px solid $gray;
+			border-bottom: 1px solid $gray;
+			
+			&:nth-child(5n+5) {
+				border-right: none;
+			}
+			
+			&:nth-last-child(-n+5) {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+footer {
+	@include flex;
+	flex-flow: row wrap;
+	background: $secColor;
+	justify-content: space-around;
+	color: $white;	
+	width: 100%;
+	height: 300px;
+	
+	p {
+		margin: 0;
+		line-height: 1.4em;
+	}
+	
+	.sitemap {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		
+		li {
+			overflow: hidden;
+			line-height: 1.4;
+		}
+		
+		a {
+			color: $white;
+			padding: 0;
+		}
+		
+		li a span::before {
+			position: absolute;
+			top: 100%;
+			width: 220px;
+			content: attr(data-hover);
+			font-weight: 700;
+			-webkit-transform: translate3d(0,0,0);
+			-moz-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
+		}
+	}
+	
+	.paymentGrid, .socialMedia {
+		@include flex;
+		flex-wrap: wrap;
+		width: 200px;
+		
+		.payItem {
+			max-width: 75px;
+			margin-right: .3em;
+		}
+		
+		.socialItem img {
+			height: 30px;
+		}
+		
+	}
+	
+	.socialMedia {
+		margin-top: 3em;
+	}
+}
+
+.copyright {
+	background: $secColor;
+	width: 100%;
+	font-size: .7em;
+	color: $white;
+	text-align: center;
+	padding: .5em 0;
 }
 
 

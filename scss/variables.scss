@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,700|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,700|Work+Sans:400,700');
 
 $mainColor: #565656; /* gray */
 $secColor: #8A101B; /* red */
@@ -13,7 +13,6 @@ $gray: #F2F2F2;
 
 @mixin ft {
 	font-family: 'Work Sans', sans-serif;
-	font-size: 1em;
 }
 
 @mixin flex {

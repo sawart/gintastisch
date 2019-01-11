@@ -1,5 +1,5 @@
 /* Scss Document */
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,700|Work+Sans");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,700|Work+Sans:400,700");
 /* gray */
 /* red */
 header {
@@ -96,12 +96,11 @@ nav {
 
 body, html {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1em;
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   text-transform: uppercase; }
@@ -132,6 +131,14 @@ h4 {
   width: 234px;
   height: 2em;
   font-size: 1.3em; }
+
+h5 {
+  font-size: 1em;
+  margin: 2em 0 0 0; }
+
+p, ul li a {
+  font-size: .9em;
+  letter-spacing: 2px; }
 
 a {
   color: #565656;
@@ -197,11 +204,22 @@ img {
   text-transform: uppercase; }
   .link:before {
     content: "";
-    display: block;
     width: 50px;
     height: 2px;
     margin-right: 1em; }
-
+  .link:after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    margin-left: -12.5em; }
+  .link:hover:after {
+    animation: .5s linkAnimation; }
+@keyframes linkAnimation {
+  0% {
+    margin-left: -12.5em; }
+  100% {
+    margin-left: 0;
+    width: 0; } }
 .logo {
   position: absolute;
   top: -2em;
@@ -343,7 +361,7 @@ img {
     background: #8A101B; }
     .boxWrapper .leftBox .innerBox a, .limomacher .leftBox .innerBox a {
       color: #FFF !important; }
-    .boxWrapper .leftBox .innerBox .link:before, .limomacher .leftBox .innerBox .link:before {
+    .boxWrapper .leftBox .innerBox .link:before, .boxWrapper .leftBox .innerBox .link:after, .limomacher .leftBox .innerBox .link:before, .limomacher .leftBox .innerBox .link:after {
       background: #FFF; }
   .boxWrapper .rightBox, .limomacher .rightBox {
     background: url("../img/gin-tonic-table.png") no-repeat;
@@ -384,5 +402,89 @@ img {
     padding: 2em; }
     .boxWrapper .rightLimoBox .link, .limomacher .rightLimoBox .link {
       margin-top: 2em; }
-      .boxWrapper .rightLimoBox .link:before, .limomacher .rightLimoBox .link:before {
+      .boxWrapper .rightLimoBox .link:before, .boxWrapper .rightLimoBox .link:after, .limomacher .rightLimoBox .link:before, .limomacher .rightLimoBox .link:after {
         background: #565656; }
+
+.customer {
+  margin-bottom: 4em; }
+  .customer h3 {
+    text-align: center;
+    margin: 2em 0 2em 0; }
+  .customer .customerGrid {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto; }
+    .customer .customerGrid .item {
+      box-sizing: border-box;
+      max-width: 20%;
+      padding: 2em;
+      border-right: 1px solid #F2F2F2;
+      border-bottom: 1px solid #F2F2F2; }
+      .customer .customerGrid .item:nth-child(5n+5) {
+        border-right: none; }
+      .customer .customerGrid .item:nth-last-child(-n+5) {
+        border-bottom: none; }
+
+footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  background: #8A101B;
+  justify-content: space-around;
+  color: #FFF;
+  width: 100%;
+  height: 300px; }
+  footer p {
+    margin: 0;
+    line-height: 1.4em; }
+  footer .sitemap {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    footer .sitemap li {
+      overflow: hidden;
+      line-height: 1.4; }
+    footer .sitemap a {
+      color: #FFF;
+      padding: 0; }
+    footer .sitemap li a span::before {
+      position: absolute;
+      top: 100%;
+      width: 220px;
+      content: attr(data-hover);
+      font-weight: 700;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+  footer .paymentGrid, footer .socialMedia {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px; }
+    footer .paymentGrid .payItem, footer .socialMedia .payItem {
+      max-width: 75px;
+      margin-right: .3em; }
+    footer .paymentGrid .socialItem img, footer .socialMedia .socialItem img {
+      height: 30px; }
+  footer .socialMedia {
+    margin-top: 3em; }
+
+.copyright {
+  background: #8A101B;
+  width: 100%;
+  font-size: .7em;
+  color: #FFF;
+  text-align: center;
+  padding: .5em 0; }
