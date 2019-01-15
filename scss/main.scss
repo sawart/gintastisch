@@ -161,15 +161,6 @@ img {
   
 }
 
-
-.logo {
-	position: absolute;
-	top: -2em;
-	width: 150px;
-	height: 150px;
-	margin-left: 2em;
-}
-
 .introWrapper {
 	position: relative; 
 	top: 3em; 
@@ -482,8 +473,94 @@ footer {
 	padding: .5em 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1365px) {
+	.introWrapper {
+		.intro {
+			width: 80%;
+		}
+	}
 	
+	.wrapper .intro .madeInAustria {
+		margin-left: 8em;
+	}
+}
+
+@media (max-width: 1024px) {
+	.customer .customerGrid {
+		width: 80%;
+	}
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 2em;
+	}
+	
+	.introWrapper {
+		
+		.intro {
+			.bottle {
+				min-width: 220px;
+			}
+			
+			.introText{
+				padding: 3em 0 0 2em;
+				
+				.advantages {
+					flex-flow: column nowrap;
+					
+					.item {
+						width: 100%;
+						
+						p {
+							width: 260px;
+						}
+					}
+				}	
+			}
+		}
+	}
+	
+	#buttons {
+		flex-direction: column;
+		
+		.btn {
+			width: 165px;
+			text-align: center;
+		}
+		
+		.btn:first-child {
+			margin: 0 0 1.5em 0;
+		}
+	}
+	
+	.wrapper .intro {
+		width: 100%;
+		
+		.madeInAustria {
+			display: none;
+		}	
+	} 
+	
+	.wrapper .intro .innerWrapper .ingredients {
+		padding: 0;
+	}
+	
+	footer {
+		height: auto;
+	}
+	
+	.copyright {
+		padding: 1.5em 0;
+	}
+	
+	.customer .customerGrid {
+		width: 75%;
+		
+		.item {
+			max-width: 33.33%;
+		}
+	}
 }
 
 
