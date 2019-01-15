@@ -2,6 +2,7 @@
 
 @import 'variables';
 @import 'menu';
+@import 'hamburgers';
 
 body, html {
 	@include ft; 
@@ -414,6 +415,10 @@ footer {
 	width: 100%;
 	height: 300px;
 	
+	a {
+		color: $white;	
+	}
+	
 	p {
 		margin: 0;
 		line-height: 1.4em;
@@ -458,6 +463,7 @@ footer {
 		
 		.socialItem img {
 			height: 30px;
+			margin-right: 2em;
 		}
 		
 	}
@@ -474,6 +480,10 @@ footer {
 	color: $white;
 	text-align: center;
 	padding: .5em 0;
+}
+
+@media (max-width: 768px) {
+	
 }
 
 
