@@ -3,9 +3,9 @@ $(document).ready(function(){
 		$(this).toggleClass("is-active");
 		
 		if($(".hamburger").hasClass("is-active")) {
-			$(".cl-effect-5").css("display", "flex");
+			$("nav .cl-effect-5").css("display", "flex");
 		} else {
-			$(".cl-effect-5").css("display", "none");
+			$("nav .cl-effect-5").css("display", "none");
 		}
 	});
 });

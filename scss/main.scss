@@ -641,7 +641,7 @@ footer {
 				
 				p {
 					display: none;
-					padding: 0 0 1.5em 0;
+					padding: 0 0 1.5em 38px;
 					width: 100%;
 					min-width: 285px;
 				}
@@ -667,6 +667,14 @@ footer {
 			.innerBox {
 				padding-top: 1.5em;
 			}
+		}
+	}
+	
+	.customer .customerGrid {
+		width: 85%;
+		
+		.item {
+			padding: 1.2em;
 		}
 	}
 }
