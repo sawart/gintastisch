@@ -103,6 +103,8 @@ nav {
 	-webkit-transform: translate3d(0,0,0);
 	-moz-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+	text-align: center;
+	width: 100%;
 }
 
 .cl-effect-5 li a:hover span,
@@ -140,7 +142,7 @@ nav {
 			display: none;
 			position: fixed;
 			flex-flow: column nowrap;
-			justify-content: space-evenly;
+			justify-content: center;
 			align-items: center;
 			width: 100%;
 			height: 100%;
@@ -148,6 +150,14 @@ nav {
 			padding: 0;
 			margin: 0;
 			animation: overlay .5s;
+			
+			li {
+				height: 4em;
+				
+				a {
+					font-size: 3em;
+				}
+			} 
 		}
 		
 		@keyframes overlay {
@@ -192,6 +202,10 @@ nav {
 			
 			li {
 				height: calc(50%/4);
+				
+				a {
+					font-size: 2em;
+				}
 			}
 		}
 	}

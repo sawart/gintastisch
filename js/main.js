@@ -11,6 +11,21 @@ $(document).ready(function(){
 });
 
 /*
+$(document).ready(function(){
+	$(".ingredients .item h3").on("click", function(){
+		$(".ingredients .item p").css("display", "none");
+			$(".ingredients .item p").css("display", "block");
+	});
+});
+*/
+
+$(document).ready(function(){
+	$(".ingredients .item h3").click(function(){ // trigger
+		$(this).next("p").slideToggle("fast"); // blendet beim Klick auf "dt" die nächste "dd" ein.
+	});
+});
+
+/*
 
 $(window).resize(function(){
 
